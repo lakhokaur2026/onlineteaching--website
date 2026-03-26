@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub - Premium Learning</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI';}
+
+body{
+  background:linear-gradient(to right,#eef2f3,#8e9eab);
+}
+
+/* NAV */
+nav{
+  position:sticky;top:0;
+  background:#111;padding:15px;text-align:center;
+}
+nav a{color:white;margin:0 15px;text-decoration:none;}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;justify-content:center;align-items:center;
+  text-align:center;color:white;
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+  url('https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg');
+  background-size:cover;
+}
+
+/* SECTION */
+.section{padding:60px 20px;text-align:center;}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;margin-top:30px;
+}
+
+.card, .trial-card{
+  background:white;
+  padding:20px;border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover, .trial-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;height:150px;object-fit:cover;border-radius:10px;
+}
+
+.price{color:#2e7d32;font-weight:bold;margin:10px;}
+
+.rating{
+  color:orange;
+  margin:5px 0;
+}
+
+button{
+  padding:10px;background:#4CAF50;color:white;border:none;border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#2e7d32;
+  transform:scale(1.05);
+}
+
+/* TRIAL */
+.trial-img{
+  font-size:50px;
+  margin-bottom:10px;
+}
+
+/* FORM */
+.form-box{
+  background:white;
+  width:400px;
+  margin:40px auto;
+  padding:20px;
+  border-radius:10px;
+}
+
+.form-box input,.form-box select{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+/* OFFER */
+.offer{
+  background:#ffeb3b;
+  padding:15px;
+  border-radius:10px;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+/* APP */
+.app{
+  background:#4CAF50;
+  color:white;
+  padding:40px;
+}
+
+.app button{
+  background:white;
+  color:#4CAF50;
+  margin:10px;
+}
+
+/* TABLE */
+table{
+  width:90%;
+  margin:auto;
+  border-collapse:collapse;
+}
+
+th,td{
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+th{background:#4CAF50;color:white;}
+
+footer{
+  background:#111;color:white;text-align:center;padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#">Home</a>
+<a href="#subjects">Subjects</a>
+<a href="#trial">Trial</a>
+<a href="#enroll">Enroll</a>
+<a href="#admin">Admin</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>StudyHub</h1>
+<p>Class 9 & 10 Premium Learning Platform</p>
+</div>
+</section>
+
+<!-- SUBJECTS -->
+<section id="subjects" class="section">
+<h2>Subjects</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg">
+<h3>Mathematics</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+<div class="price">₹2000</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg">
+<h3>Science</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+<div class="price">₹2000</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg">
+<h3>English</h3>
+<div class="rating">⭐⭐⭐⭐ (4.5)</div>
+<div class="price">₹1500</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg">
+<h3>Hindi</h3>
+<div class="rating">⭐⭐⭐⭐ (4.4)</div>
+<div class="price">₹1500</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg">
+<h3>Social Science</h3>
+<div class="rating">⭐⭐⭐⭐ (4.6)</div>
+<div class="price">₹1500</div>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg">
+<h3>Computer Science</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+<div class="price">₹1500</div>
+</div>
+
+</div>
+
+<div class="offer">
+🎯 All Subjects Package → ₹7000 (Save ₹2000)
+</div>
+</section>
+
+<!-- TRIAL -->
+<section id="trial" class="section">
+<h2>Trial Classes</h2>
+
+<div class="cards">
+
+<div class="trial-card">
+<div class="trial-img">📘</div>
+<h3>Math Demo</h3>
+<p>Basic Algebra</p>
+<button onclick="buyTrial()">Unlock @ ₹500</button>
+</div>
+
+<div class="trial-card">
+<div class="trial-img">🔬</div>
+<h3>Science Demo</h3>
+<p>Physics Basics</p>
+<button onclick="buyTrial()">Unlock @ ₹500</button>
+</div>
+
+<div class="trial-card">
+<div class="trial-img">💻</div>
+<h3>CS Demo</h3>
+<p>Programming Intro</p>
+<button onclick="buyTrial()">Unlock @ ₹500</button>
+</div>
+
+</div>
+</section>
+
+<!-- APP -->
+<section class="app">
+<h2>Download Our App</h2>
+<p>Learn anytime, anywhere</p>
+<button>Android</button>
+<button>iOS</button>
+</section>
+
+<!-- ENROLL -->
+<section id="enroll" class="section">
+<h2>Enroll Now</h2>
+
+<div class="form-box">
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+
+<select id="class">
+<option>Select Class</option>
+<option>Class 9</option>
+<option>Class 10</option>
+</select>
+
+<select id="subject">
+<option>Select Subject</option>
+<option>Mathematics</option>
+<option>Science</option>
+<option>English</option>
+<option>Hindi</option>
+<option>SST</option>
+<option>CS</option>
+<option>All</option>
+</select>
+
+<button onclick="enroll()">Enroll</button>
+</div>
+</section>
+
+<!-- ADMIN -->
+<section id="admin" class="section">
+<h2>Admin Dashboard</h2>
+<button onclick="loadData()">Load Data</button>
+
+<table id="table" style="display:none;">
+<thead>
+<tr>
+<th>Name</th><th>Phone</th><th>Class</th><th>Subject</th><th>Price</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+
+<footer>© 2026 StudyHub</footer>
+
+<script>
+function buyTrial(){
+let c=confirm("Unlock 3 Trial Classes for ₹500?");
+if(c){
+alert("Payment Successful 🎉");
+}
+}
+
+function enroll(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let cls=document.getElementById("class").value;
+let sub=document.getElementById("subject").value;
+
+if(!name||!phone||!cls||!sub){
+alert("Fill all details");
+return;
+}
+
+let price=0;
+if(sub==="Mathematics"||sub==="Science") price=2000;
+else if(sub==="All") price=7000;
+else price=1500;
+
+let data={name,phone,class:cls,subject:sub,price};
+localStorage.setItem("student_"+Date.now(),JSON.stringify(data));
+
+alert("Enrolled Successfully!");
+}
+
+function loadData(){
+let tbody=document.querySelector("tbody");
+tbody.innerHTML="";
+
+for(let k in localStorage){
+if(k.startsWith("student_")){
+let d=JSON.parse(localStorage[k]);
+
+tbody.innerHTML+=`
+<tr>
+<td>${d.name}</td>
+<td>${d.phone}</td>
+<td>${d.class}</td>
+<td>${d.subject}</td>
+<td>₹${d.price}</td>
+</tr>`;
+}
+}
+
+document.getElementById("table").style.display="table";
+}
+</script>
+
+</body>
+</html>
